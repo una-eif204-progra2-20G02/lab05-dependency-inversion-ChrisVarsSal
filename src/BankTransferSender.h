@@ -7,10 +7,11 @@
 
 
 #include <string>
+#include "ITransferSender.h"
 
-class BankTransferSender  {
+class BankTransferSender  : public ITransferSender{
 public:
-    std::string sendPayment() const;
+    std::string sendPayment() override;
 };
 
 
