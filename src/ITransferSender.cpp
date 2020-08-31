@@ -3,3 +3,6 @@
 //
 
 #include "ITransferSender.h"
+
+ITransferSender::ITransferSender() {}
+ITransferSender::~ITransferSender() {}

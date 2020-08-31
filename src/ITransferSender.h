@@ -7,6 +7,10 @@
 
 
 class ITransferSender {
+public:
+    ITransferSender();
+    virtual ~ITransferSender();
+    virtual std::string sendPayment()=0;
 
 };
 
