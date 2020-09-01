@@ -13,7 +13,10 @@ class CashSender : public ITransferSender{
 private:
     ITransferSender* per = new Person();
 public:
-    std::string sendPayment();
+    CashSender(ITransferSender*);
+    virtual ~CashSender();
+    static std::string sendPayment();
+    void transfer(bool);
 };
 
 

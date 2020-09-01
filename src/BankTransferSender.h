@@ -8,10 +8,16 @@
 
 #include <string>
 #include "ITransferSender.h"
+#include "Person.h"
 
 class BankTransferSender  : public ITransferSender{
+private:
+    ITransferSender* per = new Person();
 public:
+    BankTransferSender(ITransferSender*);
+    virtual ~BankTransferSender();
     std::string sendPayment();
+    void transfer(bool);
 };
 
 
