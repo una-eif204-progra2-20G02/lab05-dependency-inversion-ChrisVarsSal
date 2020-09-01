@@ -11,7 +11,7 @@
 
 class BankTransferSender  : public ITransferSender{
 public:
-    std::string sendPayment() override;
+    std::string sendPayment();
 };
 
 

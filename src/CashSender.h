@@ -10,7 +10,7 @@
 
 class CashSender : public ITransferSender{
 public:
-    std::string sendPayment() override;
+    std::string sendPayment() ;
 };
 
 

@@ -10,8 +10,9 @@ class ITransferSender {
 public:
     ITransferSender();
     virtual ~ITransferSender();
-    virtual std::string sendPayment()=0;
-
+    virtual std::string processPaymentBankTransfer()=0;
+    virtual std::string processPaymentCash()=0;
+    virtual std::string processPaymentCheck()=0;
 };
 
 
