@@ -7,10 +7,13 @@
 
 #include <string>
 #include "ITransferSender.h"
+#include "Person.h"
 
 class CashSender : public ITransferSender{
+private:
+    ITransferSender* per = new Person();
 public:
-    std::string sendPayment() ;
+    std::string sendPayment();
 };
 
 

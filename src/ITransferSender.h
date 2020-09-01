@@ -5,6 +5,8 @@
 #ifndef MY_PROJECT_NAME_ITRANSFERSENDER_H
 #define MY_PROJECT_NAME_ITRANSFERSENDER_H
 
+#include <iostream>
+using namespace std;
 
 class ITransferSender {
 public:
