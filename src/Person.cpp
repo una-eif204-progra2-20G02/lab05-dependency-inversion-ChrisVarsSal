@@ -10,6 +10,8 @@ Person::Person(const std::string &firstName, const std::string &lastName, int do
                                                                                             lastName(lastName),
                                                                                             documentId(documentId) {}
 
+Person::~Person(){}
+
 const std::string &Person::getFirstName() const {
     return firstName;
 }
@@ -39,16 +41,13 @@ std::string Person::toString() const {
 }
 
 std::string Person::processPaymentBankTransfer() {
-    BankTransferSender* bankTransferSender;
-    return bankTransferSender->sendPayment();
+    return bank->sendPayment();
 }
 
 std::string Person::processPaymentCash() {
-    CashSender* cashSender;
-    return cashSender->sendPayment();
+    return cash->sendPayment();
 }
 
 std::string Person::processPaymentCheck() {
-    CheckSender* checkSender;
-    return checkSender->sendPayment();
+    return check->sendPayment();
 }

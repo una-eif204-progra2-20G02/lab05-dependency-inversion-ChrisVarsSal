@@ -15,7 +15,7 @@ private:
 public:
     CheckSender(ITransferSender*);
     virtual ~CheckSender();
-    std::string sendPayment();
+    static std::string sendPayment();
     void transfer(bool);
 };
 

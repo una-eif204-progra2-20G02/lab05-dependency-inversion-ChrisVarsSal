@@ -3,6 +3,9 @@
 
 #include <string>
 #include <ostream>
+#include <iostream>
+#include <sstream>
+using namespace std;
 #include "ITransferSender.h"
 #include "CashSender.h"
 #include "BankTransferSender.h"
@@ -17,7 +20,7 @@ public:
     // Constructors
     Person();
     Person(const std::string &firstName, const std::string &lastName, int documentId);
-    virtual ~Person() = default;
+    virtual ~Person();
 
     // Gets and Sets
     const std::string &getFirstName() const;
@@ -41,6 +44,9 @@ private:
     std::string firstName;
     std::string lastName;
     int documentId;
+    BankTransferSender* bank;
+    CheckSender* check;
+    CashSender* cash;
 };
 
 #endif //UNIT_TESTING_01_BASIC_PERSON_H
